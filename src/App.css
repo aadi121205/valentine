@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffe4e1; /* Light pink background */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 20px;
+}
+
+.valentine-question-card {
+  background-color: white;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.question-gif {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.valentine-question {
+  color: #e91e63; /* Deep pink */
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.valentine-buttons {
+  display: flex;
+  gap: 30px;
+  position: relative; /* For positioning the no button */
+  width: 100%;
+  justify-content: center;
+}
+
+.yes-button, .no-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.yes-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.yes-button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.no-button {
+  background-color: #f44336; /* Red */
+  color: white;
+  position: absolute; /* Allows for movement */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.no-button:hover {
+  background-color: #d32f2f;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valentine-response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.yes-gif {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.valentine-text {
+  color: #e91e63;
+  font-size: 3em;
+  margin: 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Ensure no button has enough space to move */
+.valentine-buttons {
+  min-height: 80px; /* Adjust as needed */
+  min-width: 200px; /* Adjust as needed */
+}
